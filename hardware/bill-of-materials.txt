@@ -1,3 +1,2 @@
-- Microcontroller: ATMega328V
-- Analog Temperature Sensor: MCP9700
-- Digital Temperature Sensor: TMP102
+- Microcontroller: ATMega32u4
+- Temperature/Humidity Sensor: Si7021
