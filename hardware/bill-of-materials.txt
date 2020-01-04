@@ -1,2 +1,2 @@
-- Microcontroller: ATMega32u4
-- Temperature/Humidity Sensor: Si7021
+- Microcontroller: ESP8266EX
+- Temperature/Humidity Sensor: HDC1080DMBR
