@@ -1,4 +1,4 @@
 - LDO Regulator: ???
-- USB <-> UART: PL2303HXD
+- USB <-> UART: PL2303SA
 - Microcontroller: ESP8266EX
 - Temperature/Humidity Sensor: HDC1080DMBR
