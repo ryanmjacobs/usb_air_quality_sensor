@@ -27,13 +27,13 @@ $EndComp
 $Comp
 L Sensor:BME280 U?
 U 1 1 5E0B0254
-P 5400 2650
-F 0 "U?" H 4971 2696 50  0000 R CNN
-F 1 "BME280" H 4971 2605 50  0000 R CNN
-F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 6900 2200 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 5400 2450 50  0001 C CNN
-	1    5400 2650
-	1    0    0    -1  
+P 6450 2650
+F 0 "U?" H 6020 2696 50  0000 R CNN
+F 1 "BME280" H 6020 2605 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 7950 2200 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 6450 2450 50  0001 C CNN
+	1    6450 2650
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C C?
@@ -60,34 +60,23 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 5E0B45EF
-P 6150 4750
-F 0 "R?" H 6220 4796 50  0000 L CNN
-F 1 "2K" H 6220 4705 50  0000 L CNN
-F 2 "" V 6080 4750 50  0001 C CNN
-F 3 "~" H 6150 4750 50  0001 C CNN
-	1    6150 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5E0B4E82
-P 6550 4750
-F 0 "R?" H 6620 4796 50  0000 L CNN
-F 1 "2K" H 6620 4705 50  0000 L CNN
-F 2 "" V 6480 4750 50  0001 C CNN
-F 3 "~" H 6550 4750 50  0001 C CNN
-	1    6550 4750
+P 5450 1600
+F 0 "R?" H 5520 1646 50  0000 L CNN
+F 1 "2K" H 5520 1555 50  0000 L CNN
+F 2 "" V 5380 1600 50  0001 C CNN
+F 3 "~" H 5450 1600 50  0001 C CNN
+	1    5450 1600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5E0B50C6
-P 6150 4750
-F 0 "R?" H 6220 4796 50  0000 L CNN
-F 1 "2K" H 6220 4705 50  0000 L CNN
-F 2 "" V 6080 4750 50  0001 C CNN
-F 3 "~" H 6150 4750 50  0001 C CNN
-	1    6150 4750
+P 5150 1600
+F 0 "R?" H 5220 1646 50  0000 L CNN
+F 1 "2K" H 5220 1555 50  0000 L CNN
+F 2 "" V 5080 1600 50  0001 C CNN
+F 3 "~" H 5150 1600 50  0001 C CNN
+	1    5150 1600
 	1    0    0    -1  
 $EndComp
 $Comp

@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_ATmega:ATmega32U4-AU U?
-U 1 1 5E0AF899
-P 3800 3800
-F 0 "U?" H 3800 1911 50  0000 C CNN
-F 1 "ATmega32U4-AU" H 3800 1820 50  0000 C CNN
-F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 3800 3800 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 3800 3800 50  0001 C CNN
-	1    3800 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Sensor:BME280 U?
 U 1 1 5E0B0254
 P 6450 2650
@@ -80,79 +69,6 @@ F 3 "~" H 5150 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Micro J?
-U 1 1 5E0B56D8
-P 2200 3300
-F 0 "J?" H 2257 3767 50  0000 C CNN
-F 1 "USB_B_Micro" H 2257 3676 50  0000 C CNN
-F 2 "" H 2350 3250 50  0001 C CNN
-F 3 "~" H 2350 3250 50  0001 C CNN
-	1    2200 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E0B61AE
-P 2100 3700
-F 0 "#PWR?" H 2100 3450 50  0001 C CNN
-F 1 "GND" H 2105 3527 50  0000 C CNN
-F 2 "" H 2100 3700 50  0001 C CNN
-F 3 "" H 2100 3700 50  0001 C CNN
-	1    2100 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 3700 2100 3700
-Connection ~ 2100 3700
-$Comp
-L Device:R R?
-U 1 1 5E0BAFBF
-P 2900 3400
-F 0 "R?" V 3000 3400 50  0000 C CNN
-F 1 "22" V 2900 3400 50  0000 C CNN
-F 2 "" V 2830 3400 50  0001 C CNN
-F 3 "~" H 2900 3400 50  0001 C CNN
-	1    2900 3400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2500 3400 2750 3400
-Wire Wire Line
-	2750 3300 2500 3300
-$Comp
-L Device:R R?
-U 1 1 5E0BA8B6
-P 2900 3300
-F 0 "R?" V 2800 3300 50  0000 C CNN
-F 1 "22" V 2900 3300 50  0000 C CNN
-F 2 "" V 2830 3300 50  0001 C CNN
-F 3 "~" H 2900 3300 50  0001 C CNN
-	1    2900 3300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3200 3300 3050 3300
-Wire Wire Line
-	3200 3400 3050 3400
-Wire Wire Line
-	2500 3100 2600 3100
-$Comp
-L power:+5V #PWR?
-U 1 1 5E0D56E1
-P 2600 2700
-F 0 "#PWR?" H 2600 2550 50  0001 C CNN
-F 1 "+5V" H 2615 2873 50  0000 C CNN
-F 2 "" H 2600 2700 50  0001 C CNN
-F 3 "" H 2600 2700 50  0001 C CNN
-	1    2600 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 3100 2600 2700
-Wire Wire Line
-	2600 3100 3200 3100
-Connection ~ 2600 3100
-$Comp
 L Regulator_Linear:XC6206PxxxMR U?
 U 1 1 5E0DA486
 P 2250 6400
@@ -205,8 +121,6 @@ Wire Wire Line
 Wire Wire Line
 	1300 7150 1300 6850
 Connection ~ 1700 7150
-Text Label 2900 3100 0    50   ~ 0
-+5V
 Text Label 1300 6400 0    50   ~ 0
 +5V
 $Comp
@@ -287,6 +201,28 @@ F 1 "+3.3V" H 2815 6573 50  0000 C CNN
 F 2 "" H 2800 6400 50  0001 C CNN
 F 3 "" H 2800 6400 50  0001 C CNN
 	1    2800 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_A J?
+U 1 1 5E105FA6
+P 1800 2850
+F 0 "J?" H 1857 3317 50  0000 C CNN
+F 1 "USB_A" H 1857 3226 50  0000 C CNN
+F 2 "" H 1950 2800 50  0001 C CNN
+F 3 " ~" H 1950 2800 50  0001 C CNN
+	1    1800 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Espressif:ESP8266EX U?
+U 1 1 5E106CC0
+P 4050 2900
+F 0 "U?" H 4050 1711 50  0000 C CNN
+F 1 "ESP8266EX" H 4050 1620 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 4050 1600 50  0001 C CNN
+F 3 "http://espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf" H 4150 1600 50  0001 C CNN
+	1    4050 2900
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
