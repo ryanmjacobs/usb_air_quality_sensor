@@ -606,7 +606,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 3950 4850 3950
 Wire Wire Line
-	4850 3950 4850 2950
+	4850 3950 4850 3450
 Wire Wire Line
 	4850 2950 7300 2950
 Wire Wire Line
@@ -965,4 +965,17 @@ Wire Wire Line
 Connection ~ 3550 3400
 Wire Wire Line
 	3550 2700 3550 3400
+$Comp
+L Device:R_Small R?
+U 1 1 5E3F4D43
+P 4850 3350
+F 0 "R?" H 4909 3396 50  0000 L CNN
+F 1 "200" H 4909 3305 50  0000 L CNN
+F 2 "" H 4850 3350 50  0001 C CNN
+F 3 "~" H 4850 3350 50  0001 C CNN
+	1    4850 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3250 4850 2950
 $EndSCHEMATC
