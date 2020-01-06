@@ -147,17 +147,6 @@ F 3 " ~" H 10450 4150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L MCU_Espressif:ESP8266EX U3
-U 1 1 5E106CC0
-P 3850 4550
-F 0 "U3" H 3150 5650 50  0000 C CNN
-F 1 "ESP8266EX" H 3000 5550 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 3850 3250 50  0001 C CNN
-F 3 "http://espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf" H 3950 3250 50  0001 C CNN
-	1    3850 4550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0104
 U 1 1 5E12E0E0
 P 2550 4650
@@ -600,17 +589,7 @@ SDIO_3
 Text Label 4750 4550 0    50   ~ 0
 SDIO_0
 Wire Wire Line
-	7350 2900 7350 3650
-Wire Wire Line
 	7350 3650 7100 3650
-Wire Wire Line
-	4750 3950 4850 3950
-Wire Wire Line
-	4850 3950 4850 3450
-Wire Wire Line
-	4850 2950 7300 2950
-Wire Wire Line
-	7300 2950 7300 3850
 Wire Wire Line
 	7300 3850 7100 3850
 Wire Wire Line
@@ -639,12 +618,6 @@ Wire Wire Line
 	5250 3650 6100 3650
 Wire Wire Line
 	4750 4450 5450 4450
-Wire Wire Line
-	4750 3850 4800 3850
-Wire Wire Line
-	4800 3850 4800 2900
-Wire Wire Line
-	4800 2900 7350 2900
 Wire Wire Line
 	4750 4350 7350 4350
 Wire Wire Line
@@ -955,18 +928,14 @@ Wire Wire Line
 $Comp
 L Device:R_Small R?
 U 1 1 5E3F4D43
-P 4850 3350
-F 0 "R?" H 4909 3396 50  0000 L CNN
-F 1 "200" H 4909 3305 50  0000 L CNN
-F 2 "" H 4850 3350 50  0001 C CNN
-F 3 "~" H 4850 3350 50  0001 C CNN
-	1    4850 3350
+P 5000 3350
+F 0 "R?" H 5059 3396 50  0000 L CNN
+F 1 "200" H 5059 3305 50  0000 L CNN
+F 2 "" H 5000 3350 50  0001 C CNN
+F 3 "~" H 5000 3350 50  0001 C CNN
+	1    5000 3350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4850 3250 4850 2950
-Wire Wire Line
-	3850 3400 3850 3550
 NoConn ~ 4750 4650
 NoConn ~ 4750 4850
 NoConn ~ 4750 4950
@@ -1088,4 +1057,37 @@ Wire Wire Line
 	1300 4300 1300 4450
 Wire Wire Line
 	2350 4200 1950 4200
+Wire Wire Line
+	3850 3400 3850 3550
+$Comp
+L MCU_Espressif:ESP8266EX U3
+U 1 1 5E106CC0
+P 3850 4550
+F 0 "U3" H 3150 5650 50  0000 C CNN
+F 1 "ESP8266EX" H 3000 5550 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 3850 3250 50  0001 C CNN
+F 3 "http://espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf" H 3950 3250 50  0001 C CNN
+	1    3850 4550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2950 4050
+NoConn ~ 2950 4450
+Wire Wire Line
+	5000 3950 5000 3450
+Wire Wire Line
+	4750 3950 5000 3950
+Wire Wire Line
+	4950 3850 4950 2600
+Wire Wire Line
+	4950 2600 7300 2600
+Wire Wire Line
+	7300 2600 7300 3850
+Wire Wire Line
+	4750 3850 4950 3850
+Wire Wire Line
+	5000 3250 5000 2550
+Wire Wire Line
+	5000 2550 7350 2550
+Wire Wire Line
+	7350 2550 7350 3650
 $EndSCHEMATC
