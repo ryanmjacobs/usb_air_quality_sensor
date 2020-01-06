@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Sensor:BME280 U?
-U 1 1 5E0B0254
-P 6450 2650
-F 0 "U?" H 6020 2696 50  0000 R CNN
-F 1 "BME280" H 6020 2605 50  0000 R CNN
-F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 7950 2200 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 6450 2450 50  0001 C CNN
-	1    6450 2650
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5E0B221B
 P 6900 3950
@@ -121,8 +110,6 @@ Wire Wire Line
 Wire Wire Line
 	1300 7150 1300 6850
 Connection ~ 1700 7150
-Text Label 1300 6400 0    50   ~ 0
-+5V
 $Comp
 L power:+5V #PWR?
 U 1 1 5E0F7FE8
@@ -206,13 +193,13 @@ $EndComp
 $Comp
 L Connector:USB_A J?
 U 1 1 5E105FA6
-P 1800 2850
-F 0 "J?" H 1857 3317 50  0000 C CNN
-F 1 "USB_A" H 1857 3226 50  0000 C CNN
-F 2 "" H 1950 2800 50  0001 C CNN
-F 3 " ~" H 1950 2800 50  0001 C CNN
-	1    1800 2850
-	1    0    0    -1  
+P 3900 5100
+F 0 "J?" H 3957 5567 50  0000 C CNN
+F 1 "USB_A" H 3957 5476 50  0000 C CNN
+F 2 "" H 4050 5050 50  0001 C CNN
+F 3 " ~" H 4050 5050 50  0001 C CNN
+	1    3900 5100
+	-1   0    0    1   
 $EndComp
 $Comp
 L MCU_Espressif:ESP8266EX U?
@@ -223,6 +210,248 @@ F 1 "ESP8266EX" H 4050 1620 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 4050 1600 50  0001 C CNN
 F 3 "http://espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf" H 4150 1600 50  0001 C CNN
 	1    4050 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Humidity:HDC1080 U?
+U 1 1 5E128881
+P 6500 2950
+F 0 "U?" H 6156 2904 50  0000 R CNN
+F 1 "HDC1080" H 6156 2995 50  0000 R CNN
+F 2 "Package_SON:Texas_PWSON-N6" H 6450 2700 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/hdc1080.pdf" H 6100 3200 50  0001 C CNN
+	1    6500 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Crystal Y?
+U 1 1 5E12A9D5
+P 2500 3400
+F 0 "Y?" V 2454 3531 50  0000 L CNN
+F 1 "Crystal" V 2545 3531 50  0000 L CNN
+F 2 "" H 2500 3400 50  0001 C CNN
+F 3 "~" H 2500 3400 50  0001 C CNN
+	1    2500 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E12B586
+P 2950 2600
+F 0 "R?" V 2743 2600 50  0000 C CNN
+F 1 "12K" V 2834 2600 50  0000 C CNN
+F 2 "" V 2880 2600 50  0001 C CNN
+F 3 "~" H 2950 2600 50  0001 C CNN
+	1    2950 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 2600 3150 2600
+$Comp
+L power:GND #PWR?
+U 1 1 5E12E0E0
+P 2750 2600
+F 0 "#PWR?" H 2750 2350 50  0001 C CNN
+F 1 "GND" H 2755 2427 50  0000 C CNN
+F 2 "" H 2750 2600 50  0001 C CNN
+F 3 "" H 2750 2600 50  0001 C CNN
+	1    2750 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2600 2750 2600
+$Comp
+L Interface_USB:FT232RL U?
+U 1 1 5E12F9CC
+P 8650 4450
+F 0 "U?" H 8650 5631 50  0000 C CNN
+F 1 "FT232RL" H 8650 5540 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 9750 3550 50  0001 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 8650 4450 50  0001 C CNN
+	1    8650 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E13B586
+P 1600 4800
+F 0 "#PWR?" H 1600 4550 50  0001 C CNN
+F 1 "GND" V 1605 4672 50  0000 R CNN
+F 2 "" H 1600 4800 50  0001 C CNN
+F 3 "" H 1600 4800 50  0001 C CNN
+	1    1600 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E13D340
+P 1600 5000
+F 0 "#PWR?" H 1600 4850 50  0001 C CNN
+F 1 "+3.3V" V 1615 5128 50  0000 L CNN
+F 2 "" H 1600 5000 50  0001 C CNN
+F 3 "" H 1600 5000 50  0001 C CNN
+	1    1600 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1600 4800 1700 4800
+Wire Wire Line
+	1600 5000 1700 5000
+$Comp
+L Device:R_Small R?
+U 1 1 5E142233
+P 3200 5100
+F 0 "R?" V 3300 5100 50  0000 C CNN
+F 1 "27" V 3200 5100 50  0000 C CNN
+F 2 "" H 3200 5100 50  0001 C CNN
+F 3 "~" H 3200 5100 50  0001 C CNN
+	1    3200 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 4800 2950 4800
+$Comp
+L Device:R_Small R?
+U 1 1 5E14C904
+P 3200 5000
+F 0 "R?" V 3100 5000 50  0000 C CNN
+F 1 "27" V 3200 5000 50  0000 C CNN
+F 2 "" H 3200 5000 50  0001 C CNN
+F 3 "~" H 3200 5000 50  0001 C CNN
+	1    3200 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L lib:PL2303SA U?
+U 1 1 5E133C1F
+P 2300 4600
+F 0 "U?" H 2300 4715 50  0000 C CNN
+F 1 "PL2303SA" H 2300 4624 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 2300 4600 50  0001 C CNN
+F 3 "" H 2300 4600 50  0001 C CNN
+	1    2300 4600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2900 4900
+Wire Wire Line
+	2900 5000 3100 5000
+Wire Wire Line
+	2900 5100 3100 5100
+$Comp
+L power:GND #PWR?
+U 1 1 5E16242A
+P 4250 4800
+F 0 "#PWR?" H 4250 4550 50  0001 C CNN
+F 1 "GND" H 4255 4627 50  0000 C CNN
+F 2 "" H 4250 4800 50  0001 C CNN
+F 3 "" H 4250 4800 50  0001 C CNN
+	1    4250 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4700 4000 4700
+Wire Wire Line
+	4000 4700 4250 4700
+Wire Wire Line
+	4250 4700 4250 4800
+Connection ~ 4000 4700
+$Comp
+L power:+5V #PWR?
+U 1 1 5E1680B4
+P 3550 5300
+F 0 "#PWR?" H 3550 5150 50  0001 C CNN
+F 1 "+5V" V 3565 5428 50  0000 L CNN
+F 2 "" H 3550 5300 50  0001 C CNN
+F 3 "" H 3550 5300 50  0001 C CNN
+	1    3550 5300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1700 4900 0    50   Input ~ 0
+PL_TXD
+Text GLabel 1700 5100 0    50   Input ~ 0
+PL_RXD
+Text GLabel 4950 2700 2    50   Input ~ 0
+PL_TXD
+Text GLabel 4950 2800 2    50   Input ~ 0
+PL_RXD
+$Comp
+L Memory_Flash:W25Q32JVSS U?
+U 1 1 5E16E9BD
+P 1500 3350
+F 0 "U?" H 1500 3931 50  0000 C CNN
+F 1 "W25Q32JVSS" H 1500 3840 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 1500 3350 50  0001 C CNN
+F 3 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 1500 3350 50  0001 C CNN
+	1    1500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E1723AE
+P 3750 4450
+F 0 "#PWR?" H 3750 4300 50  0001 C CNN
+F 1 "+3.3V" H 3765 4623 50  0000 C CNN
+F 2 "" H 3750 4450 50  0001 C CNN
+F 3 "" H 3750 4450 50  0001 C CNN
+	1    3750 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4450 2950 4800
+$Comp
+L power:GND #PWR?
+U 1 1 5E17816D
+P 3150 4700
+F 0 "#PWR?" H 3150 4450 50  0001 C CNN
+F 1 "GND" H 3300 4600 50  0000 C CNN
+F 2 "" H 3150 4700 50  0001 C CNN
+F 3 "" H 3150 4700 50  0001 C CNN
+	1    3150 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4450 3150 4450
+$Comp
+L Device:C_Small C?
+U 1 1 5E1707C4
+P 3150 4600
+F 0 "C?" H 3242 4646 50  0000 L CNN
+F 1 "0.1 uF" H 3250 4550 50  0000 L CNN
+F 2 "" H 3150 4600 50  0001 C CNN
+F 3 "~" H 3150 4600 50  0001 C CNN
+	1    3150 4600
+	1    0    0    -1  
+$EndComp
+Connection ~ 3150 4450
+Wire Wire Line
+	3150 4500 3150 4450
+Wire Wire Line
+	3550 5300 3600 5300
+Wire Wire Line
+	3300 5100 3600 5100
+Wire Wire Line
+	3150 4450 3550 4450
+Wire Wire Line
+	3550 4650 3550 4450
+Connection ~ 3550 4450
+Wire Wire Line
+	3550 4450 3750 4450
+Wire Wire Line
+	3600 5000 3550 5000
+Wire Wire Line
+	3550 4850 3550 5000
+Connection ~ 3550 5000
+Wire Wire Line
+	3550 5000 3300 5000
+$Comp
+L Device:R_Small R?
+U 1 1 5E191E11
+P 3550 4750
+F 0 "R?" H 3600 4900 50  0000 L CNN
+F 1 "1.5K" H 3600 4800 50  0000 L CNN
+F 2 "" H 3550 4750 50  0001 C CNN
+F 3 "~" H 3550 4750 50  0001 C CNN
+	1    3550 4750
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
